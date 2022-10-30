@@ -9,7 +9,7 @@ import com.lambarki.yassine.demobillingserviceopenfeign.repositories.BillReposit
 import com.lambarki.yassine.demobillingserviceopenfeign.repositories.ProductItemRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.hateoas.PagedModel;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Data
 @AllArgsConstructor
+@CrossOrigin("*")
+
 public class BillingRestController {
     private BillRepository billRepository;
     private ProductItemRepository productItemRepository;
